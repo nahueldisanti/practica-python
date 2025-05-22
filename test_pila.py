@@ -7,6 +7,7 @@ import unittest
 from queue  import LifoQueue as Pila # Agregamos el tipo de datos para trabajar con Pilas
 from random import randint
 
+
 class TestPila(unittest.TestCase):
     # Crear una Pila vacía
     def test_vacia(self):
@@ -24,19 +25,24 @@ class TestPila(unittest.TestCase):
         p = Pila()
         # COMPLETAR apilar un 3
         p.put(3)
-        self.assertEqual(p.get(3), 3) # COMPLETAR parámetro del assert para verificar que la pila tiene un 3
+        self.assertEqual(p.get(), 3) # COMPLETAR parámetro del assert para verificar que la pila tiene un 3
 
     # Completar para que apile 1 y luego 2
     def test_dos_elementos(self):
         p = Pila()
+        p.put(1)
+        p.put(2)
         # COMPLETAR apilar números
-        self.assertEqual(, 2) # COMPLETAR assert
-        self.assertEqual(, 1) # COMPLETAR assert
+        self.assertEqual(p.get(), 2) # COMPLETAR assert
+        self.assertEqual(p.get(), 1) # COMPLETAR assert
 
     # Completar para que apile un número aleatorio
     def test_un_aleatorio(self):
         p = Pila()
         # COMPLETAR apilar número aleatorio
+        N = randint (1,10)
+        for i in range(N):
+            p.put(0)
         self.assertEqual(p.qsize(), 1)
 
     # Completar el test para apilar ceros una cantidad aleatoria de veces, entre 1 y 10

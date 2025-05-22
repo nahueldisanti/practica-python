@@ -4,6 +4,9 @@
     Práctica 7: Funciones sobre listas
 """
 
+
+https://bit.ly/ip1c2025-guia8
+
 m = [[1,2,3,4], [2,3,4,5], [4,5,6,7], [5,4,1,2]]
 
 def ordenados(s: list[int]) -> bool :
